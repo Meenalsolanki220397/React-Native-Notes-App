@@ -22,8 +22,23 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Dashboard} />
-        <Stack.Screen name="Add Notes" component={NoteAdd}/>
+        <Stack.Screen name="Home" 
+        component={Dashboard} 
+        options={{
+          headerTitle: () => <Header name="Notes List" />,
+          headerStyle:{
+            backgroundColor: '#4c00b0',
+            height: 120
+          }
+        }}/>
+        <Stack.Screen name="Add Notes" component={NoteAdd}
+         options={{
+          headerTitle: () => <Header name="Add Notes" />,
+          headerStyle:{
+            backgroundColor: '#4c00b0',
+            height: 120
+          }
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
     
