@@ -36,9 +36,9 @@ const Dashboard = () => {
                 data={notes}
                 renderItem={({item})=>{
                     return(
-                        <View style={style.noteContainer}>
-                            <Text style={style.noteHeading}>{item.Title}</Text>
-                            <Text style={style.noteText}>{item.Message}</Text>
+                        <View style={styles.noteContainer}>
+                            <Text style={styles.noteHeading}>{item.Title}</Text>
+                            <Text style={styles.noteText}>{item.Message}</Text>
                         </View>
                     )
                 }}
@@ -55,16 +55,27 @@ const Dashboard = () => {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: 'pink'
+        backgroundColor: '#c9f5d9'
     },
     noteContainer:{
-
+        flex: 1,
+        backgroundColor: '#fff',
+        margin: 10,
+        padding: 10,
+        borderRadius: 10,
+        shadowColor: 'red',
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        alignItems: 'center'
     },
     noteHeading:{
-
+        fontSize:20,
     },
     noteText:{
-
+        fontSize: 16,
+        marginTop: 5
     }
 })
 export default Dashboard
