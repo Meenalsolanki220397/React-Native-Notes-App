@@ -47,8 +47,6 @@ const Dashboard = () => {
 
 <Button title='Add Notes' onPress={handlePress}/>
             </View>
-            
-        
     )
 }
 
